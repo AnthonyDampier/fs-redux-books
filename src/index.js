@@ -10,6 +10,11 @@ import * as serviceWorker from './serviceWorker';
 
 const bookList = (state = [], action) => {
   // TODO - set book list with data from server
+  switch(action.type){
+    case 'SET_BOOKS':
+      console.log('SET_BOOKS');
+      return action.payload; //to add two arrays together [...state, ...action.payload]
+  }
   return state;
 }
 
